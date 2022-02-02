@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 import '../Styles/TodoItem.css';
 
 export function TodoItem(props) {
@@ -15,4 +15,4 @@ export function TodoItem(props) {
             </span>
         </li>
     )
-}
+} */
