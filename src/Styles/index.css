@@ -3,11 +3,10 @@ body {
   margin: 0;
   padding: 0;
   background: #1e684f;
-  font-family: 'Monserrat';
+  font-family: 'Montserrat';
   color: #1E1E1F;
 }
 #root {
-  margin: 0 24px;
   position: relative;
   min-height: 100vh;
 }

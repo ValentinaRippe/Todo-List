@@ -1,10 +1,9 @@
 import React from "react";
 import "../Styles/TodoList.css";
-import '../Styles/TodoItem.css';
-import { Checkbox } from './Checkbox' 
+import { Checkbox } from "./Checkbox";
 
 export function TodoList(props) {
-  const { todos, setTodos, searchedTodos} = props;
+  const { todos, setTodos, searchedTodos } = props;
 
   const onClickRemoveItem = (e) => {
     const updateList = todos.filter((item) => !item.done);
@@ -24,16 +23,17 @@ export function TodoList(props) {
     <Checkbox key={item.id} data={item} onChange={onChangeStatus}></Checkbox>
   ));
   return (
+    <>
       <div className="TodoItem">
         {todos.length ? chk : "No tasks"}
         {todos.length ? (
           <p>
-            <button className="button-blue" onClick={onClickRemoveItem}>
-            ✗
+            <button className="button-delete" onClick={onClickRemoveItem}>
+              Delete task
             </button>
           </p>
-        ) : null}{/* <ul>{props.children}</ul> */}
+        ) : null}
       </div>
-      
+    </>
   );
 }

@@ -3,13 +3,8 @@ import { TodoCounter } from './Components/TodoCounter';
 import { TodoSearch } from './Components/TodoSearch';
 import { TodoList } from './Components/TodoList';
 import { CreateTodos } from './Components/CreateTodos';
-/* import './App.css'; */
-/* const defaultTodos = [
-  {text: 'Cortar cebolla', completed: true},
-  {text: 'Tomar el curso de intro de React', completed: false},
-  {text: 'Llorar con la llorona', completed: false},
-];
- */
+import { Header } from './Components/Header';
+import './Styles/App.css'
 
 function App() {
   const [todos, setTodos] = React.useState([]);
@@ -36,20 +31,26 @@ function App() {
 
   return (
     <>
-      <TodoCounter
-        total={totalTodos}
-        completed={completedTodos}
-      />
-      <TodoSearch
-      key = {todos.id}
-        searchValue={searchValue}
-        setSearchValue={setSearchValue}
-      />
-      <CreateTodos handleAddItem={handleAddItem} />
+      <Header />
+      <div className='App'>
+        <div>
+          <CreateTodos handleAddItem={handleAddItem} />
+        </div>
+        <div>
+          <TodoSearch
+            key={todos.id}
+            searchValue={searchValue}
+            setSearchValue={setSearchValue}
+          />
+          <TodoCounter
+            total={totalTodos}
+            completed={completedTodos}
+          />
 
+          <TodoList todos={todos} setTodos={setTodos} searchedTodos={searchedTodos} />
 
-      <TodoList todos={todos} setTodos={setTodos} searchedTodos={searchedTodos} />
-
+        </div>
+      </div>
     </>
   );
 }

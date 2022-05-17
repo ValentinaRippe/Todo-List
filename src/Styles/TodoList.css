@@ -1,5 +1,32 @@
-ul{
-    margin: 0;
-    padding: 0 0 56px 0;
-    list-style: none;
+.TodoItem{
+    background-color: #fafafa52;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
 }
+.TodoItem-p{
+    margin: 24px 0 24px 24px;
+    width: calc(100% - 120px);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+}
+.button-delete{
+    background-color: rgba(163, 44, 44, 0.637);
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 10px;
+    border: transparent;
+}
+.button-delete:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.418);
+}
+@media (max-width: 700px) {
+    .TodoItem{
+      width: 90%;
+    }
+  }

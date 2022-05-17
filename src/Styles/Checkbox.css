@@ -1,0 +1,33 @@
+.todo-new-item {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  padding: 1rem;
+  margin: 5px;
+  background-color: rgba(255, 255, 255, 0.63);
+  border-radius: 5px;
+  font-size: 20px;
+}
+.todo-new-item:hover {
+  transform: scale(1.01);
+}
+.todo__text{
+    max-width: 70%;
+}
+.todo__state {
+    display:none;
+}
+.check{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    padding: 0 !important;
+    color: #1e684f;
+    font-weight: bolder;
+}
+
+

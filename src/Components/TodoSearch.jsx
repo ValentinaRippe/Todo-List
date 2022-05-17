@@ -9,7 +9,7 @@ export function TodoSearch({searchValue, setSearchValue}) {
     return [
         <input
          className='TodoSearch'
-         placeholder="Buscar..." 
+         placeholder="Search..." 
          value={searchValue}
          onChange={onSearchValueChange}
         />,
